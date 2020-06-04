@@ -16,13 +16,13 @@ public class StudentController {
     @RequestMapping(value = "/add/student", method = RequestMethod.GET)
     public Student addStudent(@RequestParam("stdId") String stdId, @RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName)
     {
-        return StudentService.createStudent(stdId, firstName, lastName);
+        return stdService.createStudent(stdId, firstName, lastName);
     }
 
     @RequestMapping(value = "/remove/student", method = RequestMethod.GET)
     public String removeStudent( @RequestParam("stdId") String stdId)
     {
-        StudentService.deleteStudent(stdId);
+        stdService.deleteStudent(stdId);
         return "Student removed";
     }
 }

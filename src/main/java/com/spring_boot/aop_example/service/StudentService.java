@@ -4,7 +4,7 @@ import com.spring_boot.aop_example.model.Student;
 
 @Service
 public class StudentService {
-    public static Student createStudent(String stdId, String fname, String sname)
+    public Student createStudent(String stdId, String fname, String sname)
     {
         Student std = new Student();
         std.setStdId(stdId);
@@ -13,7 +13,7 @@ public class StudentService {
         return std;
     }
 
-    public static void deleteStudent(String stdId)
+    public void deleteStudent(String stdId)
     {
     }
 }
